@@ -10,9 +10,14 @@ const arpPercentEl = document.getElementById('arpPercent');
 const bossArmor = 10643;
 const reduceableCalcConst = 15232.5;
 const arpRating = 13.99;
+const maxArpInput = 1399;
 
 const calculate = () => {
   let arp = parseFloat(arpEl.value);
+  
+  // Adjust ARP to maximum value if it's more than 1399
+  arp = Math.min(arp, maxArpInput);
+  
   let majorDebuff = majorDebuffEl.checked ? 0.20 : 0;
   let minorDebuff = minorDebuffEl.checked ? 0.05 : 0;
   let shatteringDebuff = shatteringDebuffEl.checked ? 0.20 : 0;
