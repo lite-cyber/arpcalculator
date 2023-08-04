@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+#app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #f8b700;
+    font-size: 2em;
+}
+
+.checkbox-group label {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.arp-field {
+    margin-top: 20px;
+}
+
+#result {
+    margin-top: 40px;
+    font-size: 1.3em;
+}
+
+#result span {
+    color: #f8b700;
+}
+a {
+    color: #f8b700;
+    text-decoration: none; /* Removes the underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}

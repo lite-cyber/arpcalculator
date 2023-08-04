@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+    <h1>World of Warcraft Armor Penetration Calculator</h1>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="majorDebuff"> Major Debuff (20%)</label><br>
+      <label><input type="checkbox" id="minorDebuff"> Minor Debuff (5%)</label><br>
+      <label><input type="checkbox" id="shatteringDebuff"> Shattering Debuff (20%)</label><br>
+    </div>
+
+    <div class="arp-field">
+      <label for="arp">ARP: </label>
+      <input type="number" id="arp" min="0" value="0">
+    </div>
+
+    <div id="result">
+      <h2>Armor Remaining: <span id="armor"></span></h2>
+      <h2>Remaining Final Armor: <span id="finalArmor"></span></h2>
+      <h2>Damage Mitigated by Armor: <span id="mitigation"></span>%</h2>
+      <h2>Final Total Armor Penetration: <span id="arpPercent"></span>%</h2>
+    </div>
+
+    <p>For further details on Armor Penetration Calculations and a full WOTLK Fury warrior compendium, visit the <a
+        href="https://discord.gg/fgNPBKJ6VK" target="_blank">Thaldin's Fury Warrior Compendium Discord</a>.</p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
