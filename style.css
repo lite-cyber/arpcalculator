@@ -15,7 +15,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #f8b700;
+  color: #f8b700 !important;
   font-size: 2em;
 }
 
@@ -59,22 +59,8 @@ a:hover {
     font-family: Arial, sans-serif;
 }
 
-h1, h2 {
-    color: #333;
-    margin-top: 20px;
-}
-
 p {
     margin-bottom: 15px;
-}
-
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .header {
