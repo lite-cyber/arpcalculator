@@ -111,3 +111,28 @@ a:hover {
 }
 
 /* ... remaining styles ... */
+/* New additions for the explanation page */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
