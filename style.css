@@ -66,3 +66,9 @@ p {
 .header {
     color: #fff !important;
 }
+
+.discord-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
