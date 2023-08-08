@@ -33,11 +33,13 @@ h1 {
 #result {
   margin-top: 40px;
   font-size: 1.3em;
+  color: #f8b700 !important;  /* Explicitly setting the color for the text */
 }
 
 #result span {
   color: #f8b700 !important;
 }
+
 
 a {
   color: #f8b700;
