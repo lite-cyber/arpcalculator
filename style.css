@@ -15,7 +15,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #f8b700 !important;
+  color: #f8b700;
   font-size: 2em;
 }
 
@@ -33,15 +33,14 @@ h1 {
 #result {
   margin-top: 40px;
   font-size: 1.3em;
-  color: #f8b700 !important;  /* Explicitly setting the color for the text */
+}
+
+#result h2, .container h2 {
+    color: #fff !important;
 }
 
 #result span {
-  color: #f8b700 !important;
-}
-
-#result h2 {
-    color: #f8b700 !important;
+  color: #f8b700;
 }
 
 a {
@@ -53,72 +52,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ... The remaining styles are unchanged ... */
-
-
-
-/* Responsive styles for smaller screens */
-@media only screen and (max-width: 600px) {
-  #app {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 1.8em;
-  }
-
-  .checkbox-group label {
-    font-size: 1em;
-  }
-
-  #result {
-    font-size: 1.2em;
-  }
-}
-
-.discord-invite {
-  display: flex;
-  align-items: center;
-  border: 2px solid #7289DA;
-  /* Discord's primary color */
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #2C2F33;
-  /* Discord's background color */
-  border-radius: 5px;
-}
-
-.discord-icon {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-.discord-content {
-  flex-grow: 1;
-}
-
-.discord-button {
-  display: inline-block;
-  background-color: #7289DA;
-  /* Discord's primary color */
-  color: white;
-  padding: 10px 15px;
-  border-radius: 3px;
-  text-align: center;
-  margin-top: 5px;
-  transition: background-color 0.2s;
-}
-
-.discord-button:hover {
-  background-color: #586dbf;
-  /* Slightly darker shade */
-  text-decoration: none;
-}
-
-/* ... remaining styles ... */
-/* New additions for the explanation page */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -142,4 +75,8 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.header {
+    color: #fff !important;
 }
