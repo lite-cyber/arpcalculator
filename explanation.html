@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armor Penetration Explanation | ARP Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Armor Penetration Calculation</h1>
+        <p>In Wrath, all bosses have 10643 armor.</p>
+        <p>Although the ARP hard cap is 1399, having "full" or "capped" armorpen does not always mean you will ignore 100% of the enemy's armor.</p>
+        <p>The calculation is a bit more complex, and can be divided into five sequential steps.</p>
+
+        <ol>
+            <li>Armor Debuffs</li>
+            <li>Reduceable Armor</li>
+            <li>Armor Penetration</li>
+            <li>Armor to Mitigation</li>
+            <li>Final Armor % Reduction</li>
+        </ol>
+
+        <h2>1. Armor Debuffs</h2>
+        <p>There are Major (20%) and Minor (5%) Armor reduction debuffs. Only one of each type will be applied at a time.</p>
+        <p>Major armor debuffs consist of Sunder Armor or Expose Armor while minor armor debuffs consist of Curse of Weakness or Fairy Fire.</p>
+        <p>Additionally, Shattering Throw can be added on top of the Major and Minor debuffs for another 20% reduction.</p>
+        <p>The Major and Minor Armor Debuffs stack multiplicatively.</p>
+        <p>Remaining armor after Major and Minor Armor Debuff: 10643 -20% -5% = 8088.68</p>
+        <p>Remaining armor after Major, Minor and Shattering Armor Debuff: 10643 -20% -5% -20% = 6470.944</p>
+
+        <h2>2. Reduceable Armor</h2>
+        <p>Armor Penetration only applies to "Reduceable Armor".</p>
+        <p>We get this by comparing the "Remaining armor after Armor Debuffs"(8088.68 or 6470.944 while shattered) to "(Remaining armor after Armor Debuffs + 15232.5) divided by 3" and seeing which result is lowest. The lowest of the two options is picked.</p>
+        <p>Major + Minor example:</p>
+        <p>(8088.68 + 15232.5) / 3 = 7773.73</p>
+        <p>7773.73 is lower than 8088.68 so reduceable armor is 7773.73</p>
+        <p>Major + Minor + Shattering example:</p>
+        <p>(6470.944 + 15232.5) / 3 = 7264.81</p>
+        <p>6470.944 is lower than 7264.81 so reduceable armor is 6470.944</p>
+
+        <h2>3. Armor Penetration</h2>
+        <p>This is when our Armor Penetration Rating is applied to the reducable armor.</p>
+        <p>We get 1% of the reducable armor ignored per 13.99 Armor Penetration Rating.</p>
+        <p>At runestone softcap (649arp) with no runestone proc this is 649 / 13.99 = 46.39%</p>
+        <p>At 1000 arp this is 1000 / 13.99 = 71.48%</p>
+        <p>At 1399 arp this is  1399 / 13.99 = 100%</p>
+        <p>Major + Minor Examples:</p>
+        <p>With 1000 ARP:</p>
+        <p>7773.72 * 71.48% = 5556.65</p>
+        <p>With 1399 ARP:</p>
+        <p>7773.72 * 100% = 7773.72</p>
+        <p>Major + Minor + Shattering Examples:</p>
+        <p>With 1000 ARP:</p>
+        <p>6470.944 * 71.48% = 4625.43</p>
+        <p>With 1399 ARP:</p>
+        <p>6470.944 * 100% = 6470.944</p>
+
+        <h2>4. Armor to Mitigation</h2>
+        <p>Finally, we now know how much Armor the boss has left after the Armor Debuffs, and we know how much armor we are penetrating, so we can calculate how much armor is left to mitigate incoming damage. Once we know that, we'll have a final number that represents how much total armor penetration is applied to the target.</p>
+        <p>Armor After Debuffs - How much armor we are penetrating of the reducable armor = how much total armor is removed from the boss.</p>
+        <p>Major + Minor debuff examples:</p>
+        <p>With 1000 ARP:</p>
+        <p>8088.68 - 5556.63 = 2532.05</p>
+        <p>With 1399 ARP:</p>
+        <p>8088.68 - 7773.72 = 314.96</p>
+        <p>Major + Minor + Shattering Examples:</p>
+        <p>With 1000 ARP:</p>
+        <p>6470.944 - 4625.43 = 1845.514</p>
+        <p>With 1399 ARP:</p>
+        <p>6470.944 - 6470.944 = 0</p>
+
+        <h2>5. Final Armor % Reduction</h2>
+        <p>Finally, we now know exactly how much armor if left on the target, and we just need to calculate how much damage reduction the target receives from this armor. To calculate this we take the final armor / (final armor + 15232.5).</p>
+        <p>Major + Minor Debuff examples:</p>
+        <p>With 1000 ARP:</p>
+        <p>2532.05 / (2532.05 +15232.5) = 14% Damage mitigated by armor.</p>
+        <p>With 1399 ARP:</p>
+        <p>314.96 / (314.96 +15232.5) = 2% Damage mitigated by armor.</p>
+        <p>Major + Minor + Shattering Examples:</p>
+        <p>With 1000 ARP:</p>
+        <p>1845.514 / (1845.514 +15232.5) = 10.81% Damage mitigated by armor.</p>
+        <p>With 1399 ARP:</p>
+        <p>0 / (0 + 15232.5) = 0% Damage mitigated by armor.</p>
+        <p>It is possible to achieve 100% armor penetration or true damage if only for just the duration of shattering throw.</p>
+        <a href="index.html">Back to Calculator</a>
+    </div>
+</body>
+
+</html>
