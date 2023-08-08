@@ -15,17 +15,15 @@ body {
 
 h1 {
   text-align: center;
-  color: #f8b700;
+  color: #f8b700 !important;
   font-size: 2em;
 }
 
 .checkbox-group label {
   display: block;
-  /* makes each checkbox appear on a new line */
   color: #fff;
   font-size: 1.2em;
   margin-bottom: 5px;
-  /* gives space between checkboxes */
 }
 
 .arp-field {
@@ -38,7 +36,7 @@ h1 {
 }
 
 #result span {
-  color: #f8b700;
+  color: #f8b700 !important;
 }
 
 a {
@@ -49,6 +47,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* ... The remaining styles are unchanged ... */
+
+
 
 /* Responsive styles for smaller screens */
 @media only screen and (max-width: 600px) {
