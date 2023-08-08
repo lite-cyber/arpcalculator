@@ -67,6 +67,25 @@ p {
     color: #fff !important;
 }
 
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+  #app {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .checkbox-group label {
+    font-size: 1em;
+  }
+
+  #result {
+    font-size: 1.2em;
+  }
+}
+
 .discord-invite {
   display: flex;
   align-items: center;
